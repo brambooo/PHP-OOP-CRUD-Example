@@ -10,9 +10,10 @@ class Database
 {
     // Attributes
     private static $DB_HOST = "localhost";
-    private static $DB_NAME = "root";
-    private static $DB_USER = "localhost";
-    private static $DB_PASS = "oop_php_crud_project";
+    private static $DB_NAME = "php_oop_crud_project";
+    private static $DB_USER = "root";
+    private static $DB_PASS = "";
+    public $connection;
 
     /**
      * Database constructor.
@@ -22,7 +23,7 @@ class Database
     {
         try {
             // Initialize PDO database
-            new PDO("mysql:host=" . self::$DB_HOST . ";dbname=" . self::$DB_NAME, self::$DB_USER, self::$DB_PASS);
+            $this->connection =  PDO("mysql:host=" . self::$DB_HOST . ";dbname=" . self::$DB_NAME, self::$DB_USER, self::$DB_PASS);
         } catch(PDOException $pdoE) {
             echo "Foutmelding connectie met de database: </br>";
             echo $pdoE->getMessage();

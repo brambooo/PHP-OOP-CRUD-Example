@@ -8,5 +8,31 @@
  */
 class Category
 {
+    // Attributes
+    private $db;                            // database connection
+    private $tableName = "category";        // database table name
+
+    private $id;
+    private $name;
+
+    // Constructor
+    public function __construct($db)
+    {
+        $this->db = $db;    // setup db connection, see Database class for more information
+    }
+
+    // Methods
+    public function createCategory() {
+
+    }
+
+    public function readAllCategories() {
+
+    }
+
+    public function readCategorieByID($id) {
+
+    }
+
 
 }
