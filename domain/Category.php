@@ -1,5 +1,5 @@
 <?php
-
+include_once('assets/config/database.php');
 /**
  * Created by PhpStorm.
  * User: Bram
@@ -22,16 +22,40 @@ class Category
     }
 
     // Methods
-    public function createCategory() {
-
+    public function createCategory($categoryName) {
+        $query = "INSERT INTO `category` (`name`) VALUES ('$categoryName')";
     }
 
+    /**
+     * readAllCategories()
+     * read all the categories from the database and return them
+     * @return mixed
+     */
     public function readAllCategories() {
+        $query = "SELECT * FROM {$this->tableName}";
 
+        // Prepare query
+        $stmt = $this->db->prepare($query);
+
+        // If the statement was successful return the data
+        if($stmt->execute()) {
+            // return all the categories as an associative array
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 
-    public function readCategorieByID($id) {
+    public function readCategorieNameByID($id) {
+        $query = "SELECT * FROM {$this->tableName} WHERE id = ? limit 0,1";
 
+        // Prepare statement
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(1, $id);
+
+        // If the statement was succesful return the data
+        if($stmt->execute()) {
+           $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $row['name'];
+        }
     }
 
 

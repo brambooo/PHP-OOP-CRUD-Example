@@ -13,7 +13,7 @@ class Database
     private static $DB_NAME = "php_oop_crud_project";
     private static $DB_USER = "root";
     private static $DB_PASS = "";
-    public $connection;
+    public $conn;
 
     /**
      * Database constructor.
@@ -23,7 +23,7 @@ class Database
     {
         try {
             // Initialize PDO database
-            $this->connection =  PDO("mysql:host=" . self::$DB_HOST . ";dbname=" . self::$DB_NAME, self::$DB_USER, self::$DB_PASS);
+            $this->conn = new PDO("mysql:host=" . self::$DB_HOST . ";dbname=" . self::$DB_NAME, self::$DB_USER, self::$DB_PASS);
         } catch(PDOException $pdoE) {
             echo "Foutmelding connectie met de database: </br>";
             echo $pdoE->getMessage();

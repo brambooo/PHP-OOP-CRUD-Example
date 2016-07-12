@@ -17,7 +17,7 @@ include_once('domain/Category.php');
 include_once('domain/Product.php');
 
 // Initialize Category
-$categoryObj = new Category($db);
+$categoryObj = new Category($db->conn); // assign the database connection that we have created here above as the parameter (so the Category also constain the db connection to do CRUD operations to the database).
 ?>
 
 <!-- Main content -->
@@ -37,6 +37,11 @@ $categoryObj = new Category($db);
         <div class="form-group">
             <label for="price">Categorie:</label>
             <!-- Category select -->
+            <?php
+            $categories = $categoryObj->readAllCategories();
+            echo "<pre>" . print_r($categories, true) . "</pre>";
+            exit();
+            ?>
             <input type="text" name="price" class="form-control">
         </div>
         <button type="submit" class="btn btn-success">Opslaan</button>

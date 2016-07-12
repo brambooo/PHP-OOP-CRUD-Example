@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91e47d7-6fbd-4433-b251-8a785a6c2f46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/create_product.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/footer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/view/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_product.php" afterPath="$PROJECT_DIR$/create_product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/Category.php" afterPath="$PROJECT_DIR$/domain/Category.php" />
     </list>
     <ignored path="php_oop_crud_example.iws" />
@@ -43,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/assets/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.346153">
-              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -52,9 +49,18 @@
       <file leaf-file-name="Category.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/domain/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47331786">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding />
+            <state vertical-scroll-proportion="0.512761">
+              <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+              <folding>
+                <marker date="1468344595420" expanded="true" signature="583:605" placeholder="INSERT INTO NEW... " />
+                <marker date="1468344595420" expanded="true" signature="583:624" placeholder="INSERT INTO `category`... " />
+                <marker date="1468344595420" expanded="true" signature="583:639" placeholder="INSERT INTO `category`... " />
+                <marker date="1468344595420" expanded="true" signature="838:852" placeholder="SELECT * FRO... ${$this-&gt;tableName}" />
+                <marker date="1468344595420" expanded="true" signature="838:869" placeholder="SELECT * FRO... category" />
+                <marker date="1468344595420" expanded="true" signature="1237:1251" placeholder="SELECT * FRO... $" />
+                <marker date="1468344595420" expanded="true" signature="1237:1269" placeholder="SELECT * FRO... " />
+                <marker date="1468344595420" expanded="true" signature="1237:1292" placeholder="SELECT * FRO... $" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +68,8 @@
       <file leaf-file-name="create_product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state vertical-scroll-proportion="-8.307693">
+              <caret line="19" column="211" selection-start-line="19" selection-start-column="211" selection-end-line="19" selection-end-column="211" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
               </folding>
@@ -121,8 +127,8 @@
         <option value="$PROJECT_DIR$/view/footer.php" />
         <option value="$PROJECT_DIR$/assets/config/Database.php" />
         <option value="$PROJECT_DIR$/view/header.php" />
-        <option value="$PROJECT_DIR$/create_product.php" />
         <option value="$PROJECT_DIR$/assets/config/database.php" />
+        <option value="$PROJECT_DIR$/create_product.php" />
         <option value="$PROJECT_DIR$/domain/Category.php" />
       </list>
     </option>
@@ -360,29 +366,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state vertical-scroll-proportion="-8.307693">
+          <caret line="19" column="211" selection-start-line="19" selection-start-column="211" selection-end-line="19" selection-end-column="211" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47331786">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
+        <state vertical-scroll-proportion="0.512761">
+          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+          <folding>
+            <marker date="1468344595420" expanded="true" signature="583:605" placeholder="INSERT INTO NEW... " />
+            <marker date="1468344595420" expanded="true" signature="583:624" placeholder="INSERT INTO `category`... " />
+            <marker date="1468344595420" expanded="true" signature="583:639" placeholder="INSERT INTO `category`... " />
+            <marker date="1468344595420" expanded="true" signature="838:852" placeholder="SELECT * FRO... ${$this-&gt;tableName}" />
+            <marker date="1468344595420" expanded="true" signature="838:869" placeholder="SELECT * FRO... category" />
+            <marker date="1468344595420" expanded="true" signature="1237:1251" placeholder="SELECT * FRO... $" />
+            <marker date="1468344595420" expanded="true" signature="1237:1269" placeholder="SELECT * FRO... " />
+            <marker date="1468344595420" expanded="true" signature="1237:1292" placeholder="SELECT * FRO... $" />
+          </folding>
         </state>
       </provider>
     </entry>
