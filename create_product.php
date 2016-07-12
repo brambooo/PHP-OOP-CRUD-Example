@@ -18,6 +18,12 @@ include_once('domain/Product.php');
 
 // Initialize Category
 $categoryObj = new Category($db->conn); // assign the database connection that we have created here above as the parameter (so the Category also constain the db connection to do CRUD operations to the database).
+
+// Form handler (POST REQUEST)
+if(isset($_POST['submit'])) {
+
+}
+
 ?>
 
 <!-- Main content -->
