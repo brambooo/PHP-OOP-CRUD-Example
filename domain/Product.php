@@ -14,11 +14,11 @@ class Product
 
     // Object properties
     private $id;
-    private $name;
-    private $price;
-    private $description;
-    private $categorie_id;
-    private $created;
+    public $name;
+    public $price;
+    public $description;
+    public $categoryID;
+    public $created;
 
     // Constructor
     public function __construct($db)
@@ -32,7 +32,7 @@ class Product
         $this->name = htmlentities($this->name);
         $this->price = htmlentities($this->price);
         $this->description = htmlentities($this->description);
-        $this->categorie_id = htmlentities($this->categorie_id);
+        $this->categoryID = htmlentities($this->categoryID);
         $this->created = htmlentities($this->created);
 
         // Query
@@ -45,7 +45,7 @@ class Product
         $stmt->bindParam(1, $this->name);
         $stmt->bindParam(2, $this->price);
         $stmt->bindParam(3, $this->description);
-        $stmt->bindParam(4, $this->categorie_id);
+        $stmt->bindParam(4, $this->categoryID);
 
         // Validate if create product has been successful
         if($stmt->execute()) {

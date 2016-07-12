@@ -21,7 +21,27 @@ $categoryObj = new Category($db->conn); // assign the database connection that w
 
 // Form handler (POST REQUEST)
 if(isset($_POST['submit'])) {
+    // Instantiate new product object
+    $product = new Product($db->conn);
 
+    // Validate if all the input fields aren't empty
+    if(!empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['description']) && !empty($_POST['category_id'])) {
+
+        $product->name = $_POST['name'];
+        $product->price = (float) ($_POST['price']);
+        $product->description = $_POST['description'];
+        $product->categoryID = $_POST['category_id'];
+
+        // Create the product
+        if($product->createProduct()) {
+            echo "<div class=\"alert alert-success alert-dismissable\">";
+            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>";
+            echo "Het product met de naam $product->name is succesvol opgeslagen!";
+            echo "</div>";
+        }
+    } else {
+        echo "Vul alle velden in!!!";
+    }
 }
 
 ?>
@@ -43,7 +63,7 @@ if(isset($_POST['submit'])) {
         <div class="form-group">
             <label for="price">Categorie:</label>
             <!-- Category select -->
-            <select class="form-control" name="category">
+            <select class="form-control" name="category_id">
                 <option value="none">Selecteer een categorie</option>
                 <?php
                 $categories = $categoryObj->readAllCategories();
@@ -53,7 +73,7 @@ if(isset($_POST['submit'])) {
                 ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-success">Opslaan</button>
+        <button type="submit" name="submit" class="btn btn-success">Opslaan</button>
     </form>
 <div class="right-button-margin">
     <a href="index.php" class="btn btn-default pull-right">Alle producten bekijken</a>
