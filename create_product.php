@@ -37,12 +37,15 @@ $categoryObj = new Category($db->conn); // assign the database connection that w
         <div class="form-group">
             <label for="price">Categorie:</label>
             <!-- Category select -->
-            <?php
-            $categories = $categoryObj->readAllCategories();
-            echo "<pre>" . print_r($categories, true) . "</pre>";
-            exit();
-            ?>
-            <input type="text" name="price" class="form-control">
+            <select class="form-control" name="category">
+                <option value="none">Selecteer een categorie</option>
+                <?php
+                $categories = $categoryObj->readAllCategories();
+                foreach($categories as $categorie) {
+                    echo "<option value='{$categorie['id']}'>{$categorie['name']}</option>";
+                }
+                ?>
+            </select>
         </div>
         <button type="submit" class="btn btn-success">Opslaan</button>
     </form>
