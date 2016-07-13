@@ -55,6 +55,17 @@ class Product
         }
     }
 
+    public function readAllProduct() {
+
+    }
+
+    public function readProductByID() {
+
+    }
+
+//    private function getProductCreatedDate() {
+//            $this->created =
+//    }
     /**
      * readAllCategories()
      * read all the categories from the database and return them
