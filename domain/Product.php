@@ -55,7 +55,20 @@ class Product
         }
     }
 
-    public function readAllProduct() {
+    public function readAllProducts() {
+        $query = "READ * FROM {$this->tableName}";
+
+        // Prepare query
+        $stmt = $this->db->prepare($query);
+
+        // Check if statement was successful
+        if($stmt->execute()) {
+            // Return all the products as an associative array
+            return $stmt->fetchAll(PDO::SQLSRV_FETCH_ASSOC);
+        }
+    }
+
+    public function readProductsForSpecificPage($pageNr, $startFromProductIDNr, $productsPerPage) {
 
     }
 

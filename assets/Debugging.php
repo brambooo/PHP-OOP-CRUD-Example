@@ -15,7 +15,8 @@ class Debugging
      * Not sure about the name yet. But i use this method a lot for debugging.
      * @param $item can anything e.g. a POST/GET Request or something else we get from a database request.
      */
-    private static function printItemAsArray($item) {
+    public static function printItemAsArray($item) {
         echo "<pre>" . print_r($item, true) . "</pre>";
+        exit();
     }
 }
