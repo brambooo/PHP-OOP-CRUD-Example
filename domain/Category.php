@@ -54,7 +54,8 @@ class Category
         // If the statement was succesful return the data
         if($stmt->execute()) {
            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            return $row['name'];
+            $name = $row['name'];
+            return $name != null ? $name : 'Geen';
         }
     }
 

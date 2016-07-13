@@ -37,15 +37,20 @@ $products = $product->readAllCategories();
    // Load products from the database
    foreach($products as $product) {
 
-       Debugging::printItemAsArray($product);
+       // Debugging::printItemAsArray($product);
+
        // Extract product so we can call them easily with the column names of the database
        extract($product);
        echo "<tr>";
             echo "<td>{$name}</td>";
-            echo "<td>{$price}</td>";
             echo "<td>{$description}</td>";
-            echo "<td>{$name}</td>";
-            echo "<td>{$name}</td>";
+            echo "<td>&euro;{$price}</td>";
+            // Get category name for the given category id
+            $category = new Category($db->conn);
+            $categoryName = $category->readCategorieNameByID($category_id);
+            echo "<td>{$categoryName}</td>";
+            echo "<td>{$created}</td>";
+            echo "<td>acties</td>";
        echo "/<tr>";
    }
    ?>
