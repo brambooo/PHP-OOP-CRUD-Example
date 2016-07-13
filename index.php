@@ -50,7 +50,10 @@ $products = $product->readAllCategories();
             $categoryName = $category->readCategoryNameByID($category_id);
             echo "<td>{$categoryName}</td>";
             echo "<td>{$created}</td>";
-            echo "<td>acties</td>";
+            echo "<td>
+                    <a href='update_product.php?id={$id}' class='btn btn-primary'> Bewerken</a>
+                    <a href='#' onclick='deleteProduct($id)' class='btn btn-danger'> Verwijderen</a>
+                 </td>";
        echo "/<tr>";
    }
    ?>

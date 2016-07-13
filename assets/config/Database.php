@@ -32,5 +32,29 @@ class Database
 
     // Methods
     // Useful methods will be added later.
+    public function createRecordForTable($tableName, $columnValues) {
+
+    }
+
+    /**
+     * readRecordFromTableByID()
+     * read a specific record from a database table.
+     * @param $tableName    name from the table
+     * @param $id           id of the item in the table
+     * @return              record as an associative array.
+     */
+    public function readRecordFromTableByID($tableName, $id) {
+        // Query
+        $stmt = $this->conn->prepare("SELECT * FROM {$tableName} WHERE id = {$id}");
+        if($stmt->execute()) {
+            return $stmt->fetch();
+        }
+    }
+
+    public function readAllRecordsFromTable($tableName) {
+
+    }
+
+    public function deleteOneRecordFromTable($tableName, $id) {}
 
 }

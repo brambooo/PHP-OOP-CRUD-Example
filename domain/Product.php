@@ -10,10 +10,10 @@ class Product
 {
     // Attributes
     private $db;                            // database connection
-    private $tableName = "product";        // database table name
+    public $tableName = "product";        // database table name
 
     // Object properties
-    private $id;
+    public $id;
     public $name;
     public $price;
     public $description;
@@ -72,7 +72,18 @@ class Product
 
     }
 
-    public function readProductByID() {
+    public function readProductByID($id = null) {
+        $productID;
+
+        if($id != null) {
+            // Get product from this product object id
+
+        } else {
+            // Get product from given parameter
+
+        }
+        $query = "SELECT * FROM {$this->tableName}";
+
 
     }
 
