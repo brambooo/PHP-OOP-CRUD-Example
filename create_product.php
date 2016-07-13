@@ -34,13 +34,18 @@ if(isset($_POST['submit'])) {
 
         // Create the product
         if($product->createProduct()) {
-            echo "<div class=\"alert alert-success alert-dismissable\">";
-            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>";
-            echo "Het product met de naam $product->name is succesvol opgeslagen!";
-            echo "</div>";
+            ?>
+            <div class="alert alert-success">
+                <strong>Succes!</strong> Het product met de naam <?php echo $product->name ?> is succesvol aangemaakt. <button class="close" data-dismiss='alert' aria-hidden="true">Sluiten</button>
+            </div>
+            <?php
         }
     } else {
-        echo "Vul alle velden in!!!";
+        ?>
+        <div class="alert alert-danger">
+            <strong>Foutmelding!</strong> Vergeet niet alle velden in te vullen. <button class="close" data-dismiss='alert' aria-hidden="true">Sluiten</button>
+        </div>
+        <?php
     }
 }
 
