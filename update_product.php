@@ -28,13 +28,48 @@ if(isset($_GET['id'])) {
     $productFromDB = $db->readRecordFromTableByID($product->tableName, $productID);
     //Debugging::printItemAsArray($productFromDB);
 
+    // Validate product
+    if(!empty($productFromDB)) {
+
+        // Check is there is an update submitted
+        if(isset($_POST['submit'])) {
+            //DEBUGGING::printItemAsArray($_POST);
+
+            // Validate fields
+            if( !empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['description']) && !empty($_POST['category_id']) ) {
+                $name           = $_POST['name'];
+                $price          = $_POST['price'];
+                $description    = $_POST['description'];
+                $category_id    = $_POST['category_id'];
+
+                // Update product in the database
+                $isUpdated = $db->updateRecord('product', $productID, array('name' => $name, 'price' => $price, 'description' => $description, 'category_id' => $category_id));
+                if($isUpdated) {
+                    ?>
+                    <div class="alert alert-success">
+                        <strong>Succes!</strong> Het producten met de naam <?php echo $name ?> is succesvol bijgewerkt! <button class="btn btn-success" onclick="navigateBack()">Sluiten</button>
+                    </div>
+                    <?php
+                }
+            }
+        }
+
+    } else {
+        ?>
+        <div class="alert alert-danger">
+            <strong>Foutmelding!</strong> Het producten met het opgegeven nummer is niet gevonden. Probeer het nog eens met een ander nummer. <button class="btn btn-danger" onclick="navigateBack()">Terug</button>
+        </div>
+        <?php
+    }
+
 } else {
     // Show error message
     ?>
-    <div class="alert alert-success">
-        <strong>Foutmelding!</strong> Het producten met het opgegeven nummer is niet gevonden. Probeer het nog eens met een ander nummer.<button onclick="navigateBack()">Terug</button>
+    <div class="alert alert-danger">
+        <strong>Foutmelding!</strong> Vergeet geen productnummer in te voeren!. <button class="btn btn-danger" onclick="navigateBack()">Terug</button>
     </div>
     <?php
+    exit();
 }
 
 ?>
@@ -42,7 +77,7 @@ if(isset($_GET['id'])) {
     <!-- Main content -->
 
     <!-- edit product form -->
-    <form action="edit_product.php" method="post">
+    <form action="update_product.php?id=<?php echo $productID; ?>" method="post">
         <div class="form-group">
             <label for="name">Naam:</label>
             <input type="name" name="name" value="<?php echo $productFromDB['name']; ?>" class="form-control" >

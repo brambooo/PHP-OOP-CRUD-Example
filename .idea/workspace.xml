@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d91e47d7-6fbd-4433-b251-8a785a6c2f46" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/config/database.php" afterPath="$PROJECT_DIR$/assets/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/update_product.php" afterPath="$PROJECT_DIR$/update_product.php" />
     </list>
     <ignored path="php_oop_crud_example.iws" />
@@ -26,8 +27,8 @@
             <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
               <entry file="file://$USER_HOME$/AppData/Local/Temp/scp55332/domains/bramreinold.nl/public_html/php_basis/databases/database.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-0.93271464">
-                    <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.7490996">
+                    <caret line="111" column="61" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
                     <folding />
                   </state>
                 </provider>
@@ -64,27 +65,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-              <folding>
-                <marker date="1468429352763" expanded="true" signature="971:1001" placeholder="INSERT INTO `category`... " />
-                <marker date="1468429352763" expanded="true" signature="971:1063" placeholder="INSERT INTO $... " />
-                <marker date="1468429352763" expanded="true" signature="2595:2609" placeholder="SELECT * FRO... $" />
-                <marker date="1468429352763" expanded="true" signature="2994:3049" placeholder="SELECT * FRO... $" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.73077">
-              <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
-              <folding />
+            <state vertical-scroll-proportion="1.8583851">
+              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+              <folding>
+                <element signature="n#readAllRecords#0;n#Database#0;n#!!top" expanded="false" />
+                <marker date="1468435390240" expanded="true" signature="101:2758" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +81,7 @@
       <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/domain/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.076923">
+            <state vertical-scroll-proportion="-24.192308">
               <caret line="46" column="40" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <marker date="1468427847328" expanded="true" signature="583:605" placeholder="INSERT INTO NEW... " />
@@ -120,17 +109,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/update_product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78306264">
-              <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
+            <state vertical-scroll-proportion="-27.923077">
+              <caret line="68" column="29" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="29" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
-                <marker date="1468431024964" expanded="true" signature="529:697" placeholder="..." />
-                <marker date="1468431024964" expanded="true" signature="705:983" placeholder="..." />
-                <marker date="1468431024964" expanded="true" signature="3252:3366" placeholder="..." />
-                <marker date="1468431024964" expanded="true" signature="3307:3353" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -172,8 +157,8 @@
         <option value="$PROJECT_DIR$/domain/Category.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/domain/Product.php" />
-        <option value="$PROJECT_DIR$/assets/config/database.php" />
         <option value="$PROJECT_DIR$/update_product.php" />
+        <option value="$PROJECT_DIR$/assets/config/database.php" />
       </list>
     </option>
   </component>
@@ -361,7 +346,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110119045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -405,7 +390,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="n#readAllRecords#0;n#Database#0;n#!!top" expanded="false" />
+            <marker date="1468435390240" expanded="true" signature="101:2758" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -470,14 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="98" selection-start-line="2" selection-start-column="98" selection-end-line="2" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13805105">
@@ -494,11 +474,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp55332/domains/bramreinold.nl/public_html/php_basis/databases/database.php">
+    <entry file="file://$PROJECT_DIR$/create_product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.93271464">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.8160173">
+          <caret line="81" column="11" selection-start-line="54" selection-start-column="3" selection-end-line="81" selection-end-column="11" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -515,17 +497,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/config/database.php">
+    <entry file="file://$PROJECT_DIR$/view/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.73077">
-          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="98" selection-start-line="2" selection-start-column="98" selection-end-line="2" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.076923">
+        <state vertical-scroll-proportion="-24.192308">
           <caret line="46" column="40" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="40" />
           <folding>
             <marker date="1468427847328" expanded="true" signature="583:605" placeholder="INSERT INTO NEW... " />
@@ -550,26 +532,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_product.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp55332/domains/bramreinold.nl/public_html/php_basis/databases/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8160173">
-          <caret line="81" column="11" selection-start-line="54" selection-start-column="3" selection-end-line="81" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.7490996">
+          <caret line="111" column="61" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.923077">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="29" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/update_product.php">
+    <entry file="file://$PROJECT_DIR$/assets/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78306264">
-          <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
+        <state vertical-scroll-proportion="1.8583851">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
           <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1468431024964" expanded="true" signature="529:697" placeholder="..." />
-            <marker date="1468431024964" expanded="true" signature="705:983" placeholder="..." />
-            <marker date="1468431024964" expanded="true" signature="3252:3366" placeholder="..." />
-            <marker date="1468431024964" expanded="true" signature="3307:3353" placeholder="{...}" />
+            <element signature="n#readAllRecords#0;n#Database#0;n#!!top" expanded="false" />
+            <marker date="1468435390240" expanded="true" signature="101:2758" placeholder="{...}" />
           </folding>
         </state>
       </provider>
