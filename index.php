@@ -47,7 +47,7 @@ $products = $product->readAllCategories();
             echo "<td>&euro;{$price}</td>";
             // Get category name for the given category id
             $category = new Category($db->conn);
-            $categoryName = $category->readCategorieNameByID($category_id);
+            $categoryName = $category->readCategoryNameByID($category_id);
             echo "<td>{$categoryName}</td>";
             echo "<td>{$created}</td>";
             echo "<td>acties</td>";

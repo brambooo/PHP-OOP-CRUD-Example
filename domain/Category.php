@@ -44,7 +44,7 @@ class Category
         }
     }
 
-    public function readCategorieNameByID($id) {
+    public function readCategoryNameByID($id) {
         $query = "SELECT * FROM {$this->tableName} WHERE id = ? limit 0,1";
 
         // Prepare statement
