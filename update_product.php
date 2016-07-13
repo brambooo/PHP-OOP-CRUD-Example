@@ -19,13 +19,14 @@ include_once('view/header.php');
 // Initialize objects
 $db = new Database();
 $product = new Product($db->conn);
+$category = new Category($db->conn);
 
 // Try to get the product for editting
 if(isset($_GET['id'])) {
     $productID = $_GET['id'];
 
     $productFromDB = $db->readRecordFromTableByID($product->tableName, $productID);
-    Debugging::printItemAsArray($productFromDB);
+    //Debugging::printItemAsArray($productFromDB);
 
 } else {
     // Show error message
@@ -39,40 +40,50 @@ if(isset($_GET['id'])) {
 ?>
 
     <!-- Main content -->
-    <table class="table table-hover table-responsive table-bordered">
-        <tr>
-            <th>Naam</th>
-            <th>Beschrijving</th>
-            <th>Prijs</th>
-            <th>Categorie</th>
-            <th>Aangemaakt</th>
-            <th>Acties</th>
-        </tr>
-        <?php
-        // Load products from the database
-        foreach($products as $product) {
 
-            // Debugging::printItemAsArray($product);
+    <!-- edit product form -->
+    <form action="edit_product.php" method="post">
+        <div class="form-group">
+            <label for="name">Naam:</label>
+            <input type="name" name="name" value="<?php echo $productFromDB['name']; ?>" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="price">Prijs:</label>
+            <input type="text" name="price"  value="<?php echo $productFromDB['price']; ?>" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="description">Beschrijving:</label>
+            <textarea name="description" class="form-control"><?php echo $productFromDB['description']; ?></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Categorie:</label>
+            <!-- Category select -->
+            <select class="form-control" name="category_id">
+                <?php
+                // Get all the categories from the database
+                $categories = $category->readAllCategories();
+                // Get selected category from the database
+                $currentCategory = $db->readRecordFromTableByID('category', $productFromDB['category_id']);
 
-            // Extract product so we can call them easily with the column names of the database
-            extract($product);
-            echo "<tr>";
-            echo "<td>{$name}</td>";
-            echo "<td>{$description}</td>";
-            echo "<td>&euro;{$price}</td>";
-            // Get category name for the given category id
-            $category = new Category($db->conn);
-            $categoryName = $category->readCategoryNameByID($category_id);
-            echo "<td>{$categoryName}</td>";
-            echo "<td>{$created}</td>";
-            echo "<td>
-                    <a href='update_product.php?id={$id}' class='btn btn-primary'> Bewerken</a>
-                    <a href='#' onclick='deleteProduct($id)' class='btn btn-danger'> Verwijderen</a>
-                 </td>";
-            echo "/<tr>";
-        }
-        ?>
-    </table>
+                // Validate if product contain a category
+                if(!empty($currentCategory)) {
+                    // If so, show that category first and then the others
+                    echo "<option value='{$currentCategory["id"]}'>{$currentCategory["name"]}</option>";
+                } else {
+                    echo "<option value='none'>Selecteer een categorie</option>";
+                }
+                // Load categories
+                foreach($categories as $category) {
+                    if($category['name'] != $currentCategory['name']) {
+                        echo "<option value='{$category["id"]}'>{$category["name"]}</option>";
+                    }
+                }
+                ?>
+            </select>
+        </div>
+        <button type="submit" name="submit" class="btn btn-success">Opslaan</button>
+    </form> <!-- end edit product form -->
+
     <div class="pull-right">
         <a href="create_product.php" class="btn btn-default">Product toevoegen</a>
     </div>
