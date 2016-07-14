@@ -19,4 +19,6 @@ class Debugging
         echo "<pre>" . print_r($item, true) . "</pre>";
         exit();
     }
+
+    // More methods will be added later
 }

@@ -17,7 +17,7 @@ include_once('domain/Category.php');
 include_once('view/header.php');
 
 // Initialize objects
-$db = new Database();
+$db = Database::getInstance();
 $product = new Product($db->conn);
 $category = new Category($db->conn);
 
@@ -47,7 +47,8 @@ if(isset($_GET['id'])) {
                 if($isUpdated) {
                     ?>
                     <div class="alert alert-success">
-                        <strong>Succes!</strong> Het producten met de naam <?php echo $name ?> is succesvol bijgewerkt! <button class="btn btn-success" onclick="navigateBack()">Sluiten</button>
+                        <strong>Succes!</strong> Het producten met de naam <?php echo $name ?> is succesvol bijgewerkt!
+                        <a class="btn btn-success" href="index.php">Terug naar het productenoverzicht</a>
                     </div>
                     <?php
                 }

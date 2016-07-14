@@ -11,7 +11,7 @@ include_once('view/header.php');
 
 // Initialize database connection
 include_once('assets/config/database.php');
-$db = new Database();
+$db = Database::getInstance();
 
 include_once('domain/Category.php');
 include_once('domain/Product.php');
@@ -32,8 +32,16 @@ if(isset($_POST['submit'])) {
         $product->description = $_POST['description'];
         $product->categoryID = $_POST['category_id'];
 
+        // Prepare Product associative array, that we want to store into the database
+        $aProduct = array(
+            'name'          => $product->name,
+            'price'         => $product->price,
+            'description'   => $product->description,
+            'category_id'   => $product->categoryID
+        );
+
         // Create the product
-        if($product->createProduct()) {
+        if($db->createRecord($product->tableName,$aProduct)) {
             ?>
             <div class="alert alert-success">
                 <strong>Succes!</strong> Het product met de naam <?php echo $product->name ?> is succesvol aangemaakt. <button class="close" data-dismiss='alert' aria-hidden="true">Sluiten</button>

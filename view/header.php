@@ -25,6 +25,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+    <!-- CUSTOM JS -->
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+
 </head>
 <body>
 

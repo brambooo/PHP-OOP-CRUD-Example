@@ -73,7 +73,6 @@ class Product
     }
 
     public function readProductByID($id = null) {
-        $productID;
 
         if($id != null) {
             // Get product from this product object id
